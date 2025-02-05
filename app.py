@@ -8,6 +8,7 @@ df = pd.read_csv("qa_dataset_with_embeddings.csv")
 df['Question'] = df['Question'].astype(str).str.lower().str.replace('[^\w\s]', '', regex=True)
 
 # Initialize OpenAI API key
+openai.api_key = st.secrets["mykey"]
 
 # Function to get embedding
 # def get_embedding(text, model="text-embedding-ada-002"):
