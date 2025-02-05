@@ -1,4 +1,5 @@
 import ast
+openai.api_key = st.secrets["mykey"]
 df = pd.read_csv("qa_dataset_with_embeddings.csv")
 
 # Convert the string embeddings back to lists
