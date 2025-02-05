@@ -1,4 +1,6 @@
 import ast
+import pandas as pd
+from openai.embeddings_utils import cosine_similarity
 
 df = pd.read_csv("qa_dataset_with_embeddings.csv")
 openai.api_key = st.secrets["mykey"]
