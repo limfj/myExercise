@@ -2,7 +2,7 @@ import pandas as pd
 from openai.embeddings_utils import cosine_similarity
 
 # Load the dataset (assuming it's a CSV)
-df = pd.read_csv("Heart_Lung_and_BloodQA.csv")
+df = pd.read_csv("qa_dataset_with_embed.csv")
 
 # Preprocess the data (remove punctuation, lowercase, etc.)
 df['Question'] = df['Question'].astype(str).str.lower().str.replace('[^\w\s]', '', regex=True)
